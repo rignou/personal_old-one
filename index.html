@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>찐 내 거 포트폴리오</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+  
+    <!-- 구글 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- 제이쿼리 -->
+    <script src="js/jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(
+            function (){
+                // $('#portfolio div.wrap span.dis a:last-child').removeClass("show");
+                // $('#portfolio div.wrap span.dis a').click(
+                //     function(){
+                //         $(this).addClass("show");
+                //         $('#portfolio div.wrap span.dis a').not(this).removeClass('show');
+                //         return false;
+                //     }                  
+                // );
+                // $('#portfolio div.wrap figure.mobile').hide();
+                // $('#portfolio div.wrap span.dis a:first-child').click(
+                //     function(){
+                //         $('#portfolio div.wrap figure.pc').show();
+                //         $('#portfolio div.wrap figure.mobile').hide();
+                //     }
+                // );
+                // $('#portfolio div.wrap span.dis a:last-child').click(
+                //     function(){
+                //         $('#portfolio div.wrap figure.mobile').show();
+                //         $('#portfolio div.wrap figure.pc').hide();
+                //     }
+                // );
+                if($(window).width() <769) {
+                       $(".bubbleb").removeClass("bubbleb").addClass("bubbles");
+                       $(".bubbleb2").removeClass("bubbleb2").addClass("bubbles2");
+                       $("header div.wrap nav article").show();
+                       $(".movs").show();
+                       $(".pcvs").hide();
+                       
+                      
+                    }else{
+                        $(".bubbles").removeClass("bubbles").addClass("bubbleb");
+                        $(".bubbles2").removeClass("bubbles2").addClass("bubbleb2"); 
+                        $("header div.wrap nav article").hide();
+                        $(".pcvs").show();
+                        $(".movs").hide();
+                    }    
+                $(window).resize(function(){
+                    if($(window).width() <769) {
+                       $(".bubbleb").removeClass("bubbleb").addClass("bubbles");
+                       $(".bubbleb2").removeClass("bubbleb2").addClass("bubbles2");
+                       $("header div.wrap nav article").show();
+                       $(".movs").show();
+                       $(".pcvs").hide();
+                      
+                        
+                    }else{
+                        $(".bubbles").removeClass("bubbles").addClass("bubbleb");
+                        $(".bubbles2").removeClass("bubbles2").addClass("bubbleb2"); 
+                        $("header div.wrap nav article").hide();
+                        $(".pcvs").show();
+                        $(".movs").hide();
+                        
+                    }    
+                });
+            
+                $(window).resize(function(){
+                    if($(window).width()<769) {
+                    $("header div.wrap nav article button").click(function(){
+                        $("header div.wrap nav article").toggleClass("asideShow");
+                    });
+                    }
+                    if($(window).width()<769) {
+                    $("header div.wrap nav article button").click(function(){
+                        $("header div.wrap nav article button").toggleClass("arrowman");
+                    });
+                    }
+                });
+                 
+                if($(window).width()<769) {
+                    $("#portfolio div.wrap article").removeClass(".popoani");
+                }
+                if($(window).width() <769) {
+                         $("#skill div.wrap ul.list > li ul.icon li").css({
+                            overflow: 'visible',
+                            width:'400px',
+                            height:'180px',
+                        });
+                         $("#skill div.wrap ul.list > li ul.icon li div.icon").css({
+                            opacity: '1',
+                            padding: 'initial',
+                            backgroundColor: 'initial',
+                            borderRadius: 'initial',
+                            boxShadow: 'initial',
+                        });
+                     }else{
+                        $("#skill div.wrap ul.list > li ul.icon li").css({
+                           
+                            overflow: '',
+                            width:'',
+                            height:'',
+                        });
+                         $("#skill div.wrap ul.list > li ul.icon li div.icon").css({
+                           
+                            opacity: '',
+                            padding: '',
+                            backgroundColor: '',
+                            borderRadius: '',
+                            boxShadow: '',
+                        });
+
+                     }
+                     $(window).resize(function(){
+                        if($(window).width() <769) {
+                         $("#skill div.wrap ul.list > li ul.icon li").css({
+                            overflow: 'visible',
+                            width:'400px',
+                            height:'180px',
+                        });
+                         $("#skill div.wrap ul.list > li ul.icon li div.icon").css({
+                            opacity: '1',
+                            padding: 'initial',
+                            backgroundColor: 'initial',
+                            borderRadius: 'initial',
+                            boxShadow: 'initial',
+                        });
+                     }else{
+                        $("#skill div.wrap ul.list > li ul.icon li").css({
+                           
+                            overflow: '',
+                            width:'',
+                            height:'',
+                        });
+                         $("#skill div.wrap ul.list > li ul.icon li div.icon").css({
+                           
+                            opacity: '',
+                            padding: '',
+                            backgroundColor: '',
+                            borderRadius: '',
+                            boxShadow: '',
+                        });
+
+                     }
+                     });
+            });
+               
+    </script>
+    <!-- 슬릭 -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.popoAni').slick({
+                infinite: true,
+                speed: 500,
+                cssEase: 'linear',
+                fade:true,      
+            }); 
+            // if($(window).width()<769) {
+            //         $('.skillani').slick({
+            //         infinite: true,
+            //         speed: 500,
+            //         cssEase: 'linear',  
+            //         dots:true,
+            //         arrows:false,
+            //         }); 
+            //         }else {
+            //             $('.skillani').slick('unslick');
+            //             }
+            // $(window).resize(function(){
+            //     if($(window).width()<769) {
+            //         $('.skillani').slick({
+            //         infinite: true,
+            //         speed: 500,
+            //         cssEase: 'linear',  
+            //         dots:true,
+            //         arrows:false,
+            //         }); 
+            //         }else {
+            //             $('.skillani').slick('unslick');
+            //             }
+            // }); 
+        }); 
+    </script>
+</head>
+<body>
+    <!-- 상단영역 -->
+    <header>
+        <div class="wrap">
+            <nav class="flex">
+                <h1><a href="" class="block">JEL's PORTFOLIO</a></h1>
+                <ul class="gnb flex">
+                    <li><a href="" class="block h5">Home</a></li>
+                    <li><a href="" class="block h5">About Me </a></li>
+                    <li><a href="" class="block h5">Skill </a></li>
+                    <li><a href="" class="block h5">Portfolio</a></li>
+                    <li><a href="" class="block h5">Contact</a></li>
+                </ul>
+                <article class=>
+                    <button class=>메뉴보기</button>
+                    <ul class=>
+                        <li><a href="" class="block h5">Home</a></li>
+                        <li><a href="" class="block h5">About Me </a></li>
+                        <li><a href="" class="block h5">Skill </a></li>
+                        <li><a href="" class="block h5">Portfolio</a></li>
+                        <li><a href="" class="block h5">Contact</a></li>
+                    </ul>
+                </article>
+            </nav>
+        </div>
+    </header>
+    <!-- 타이틀 영역 -->
+    <div id="title">
+        <div class="bubbleb bubbles"></div>
+        <div class="bubbleb2 bubbles2"></div>
+        <div class="wrap">
+            <h2 class="h1">PORTFOLIO</h2>
+            <p class="h4">코드와 색채의 조합, 웹의 시각적 향연의 시작<span class="block"></span>
+                웹의 무대를 세우는 코드 연출가의 비상</p>
+        </div>
+    </div>
+    <!-- 자기소개 -->
+    <section id="aboutme">
+        <div class="wrap paddingT50 paddingB50 flex pcvs">
+            <h2>
+                <span>이</span>
+                <span>지</span>
+                <span>은</span>
+                <span>의</span>
+                <span>주</span>
+                <span>사</span>
+                <span>위</span>
+            </h2>
+            <ul class="section grid">
+                <li>
+                    <h3 >얼굴</h3>
+                     <figure>
+                        <img src=https://placehold.co/200 alt="프로필 사진">
+                        </img>
+                    </figure>  
+                </li>
+                <li>
+                    <h3 >이력1 <span class="block"></span>
+                        이력2 <span class="block"></span>
+                        이력3 <span class="block"></span>
+                    </h3>
+                    <p>자세히보기</p>
+                </li>
+                <li>
+                    <h3 >ㅇㅇ 기능사 자격증 1급 <span class="block"></span>
+                        ㅇㅇ 자격증 1급<span class="block"></span>
+                        ㅇㅇ 자격증 2급<span class="block"></span>
+                        ㅇㅇ 자격증
+                    </h3>
+                </li>
+                <li>
+                    <h3 >기술 능력</h3>
+                    <ul class="bar-chart">
+                        <li>디자인</li>
+                        <li>퍼블리싱</li>
+                        <li>협업</li>  
+                    </ul>
+                </li>
+                <li>
+                    <h3 >관심분야</h3>
+                    <div class="back">
+                        <img src="img/sinjjangimade.png" alt="">
+                    </div>
+                    <ul class="sub flex">
+                        <li>디자인 <br>20%</li>
+                        <li>퍼블리싱 <br>25% </li>
+                        <li>영상미디어 <br>30%</li>
+                        <li>콘텐츠 구상 <br>25%</li>
+                    </ul>    
+                </li>
+                <li>
+                    <h3 >강점</h3>
+                    <ul class="bubble-chart">
+                        <li>분석</li>
+                        <li>컬러</li>
+                        <li>와이어<br>프레임</li>
+                        <li>html</li>
+                </li>
+            </ul>
+        </div>
+        <div class="wrap movs">
+            <ul class="yaya">
+                <li>
+                    <h3>소개</h3>
+                    <ul class="yuyu">
+                        <li class="indent"> 이지은</li>
+                        <li>-2x세</li>
+                        <li>-19xx-11-xx</li>
+                        <li>-경기도</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>이력</h3>
+                    <ul class="yuyu">
+                        <li>-모란 이젠 학원 UX/UI 
+                            <span class="block indent">웹페이지 제작 과정 수료</span>
+                        </li>
+                        <li>-정xxx학과 졸업예정</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>능력</h3>
+                    <ul class="yuyu">
+                        <li>-컴퓨터활용능력 x급</li>
+                        <li>-OPIC xx LEVEL</li>
+                        <li>-GTx 자격증</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>강점</h3>
+                    <ul class="yuyu">
+                        <li>-색채 조합</li>
+                        <li>-레이아웃 배치</li>
+                        <li>-디자인</li>
+                        <li>-심플 및 깔끔 추구</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- 기술과 도구 -->
+    <section id="skill">
+        <div class="wrap paddingT50 paddingB50">
+             <h2>Wanna See More Details?</h2>
+             <ul class="skillani list">               
+                <li>
+                    <ul class="icon">
+                        <li>
+                            <img src="img/photoshop.svg" alt="">
+                            <div class="icon">
+                                <h3 class="deh">Photoshop</h3>
+                                <p class="dep"> 
+                                시멘틱 마크업, 브라우저 렌더링 등 전반적인 프로세스에 관하여 잘 알고있습니다. 
+                                </p>
+                                <p class="level">기술 능숙도</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/illustrator.svg" alt="">
+                            <div class="icon">
+                                <h3 class="deh">Iillustrator</h3>
+                                <p class="dep"> 
+                                시멘틱 마크업, 브라우저 렌더링 등 전반적인 프로세스에 관하여 잘 알고있습니다. 
+                                </p>
+                                <p class="level">기술 능숙도</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/indesign.svg" alt="">
+                            <div class="icon">
+                                <h3 class="deh">InDesign</h3>
+                                <p class="dep"> 
+                                시멘틱 마크업, 브라우저 렌더링 등 전반적인 프로세스에 관하여 잘 알고있습니다. 
+                                </p>
+                                <p class="level">기술 능숙도</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/oven.png" alt="">
+                            <div class="icon">
+                                <h3 class="deh">KaKao Oven</h3>
+                                <p class="dep"> 
+                                시멘틱 마크업, 브라우저 렌더링 등 전반적인 프로세스에 관하여 잘 알고있습니다. 
+                                </p>
+                                <p class="level">기술 능숙도</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <button>디자인</button>
+                </li>
+                <li>
+                    <ul class="icon">
+                        <li>
+                            <img src="img/html.svg" alt="">
+                            <div class="icon">
+                                <h3 class="deh">HTML5</h3>
+                                <p class="dep"> 
+                                시멘틱 마크업, 브라우저 렌더링 등 전반적인 프로세스에 관하여 잘 알고있습니다. 
+                                </p>
+                                <p class="level">기술 능숙도</p>
+                            </div>      
+                        </li>
+                        <li>
+                            <img src="img/css.svg" alt="">
+                            <div class="icon">
+                                <h3 class="deh">CSS3</h3>
+                                <p class="dep"> 
+                                시멘틱 마크업, 브라우저 렌더링 등 전반적인 프로세스에 관하여 잘 알고있습니다. 
+                                </p>
+                                <p class="level">기술 능숙도</p>
+                            </div>  
+                        </li>
+                        <li>
+                            <img src="img/java.svg" alt="">
+                            <div class="icon">
+                                <h3 class="deh">JavaScript</h3>
+                                <p class="dep"> 
+                                시멘틱 마크업, 브라우저 렌더링 등 전반적인 프로세스에 관하여 잘 알고있습니다. 
+                                </p>
+                                <p class="level">기술 능숙도</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/jquery.svg" alt="">
+                            <div class="icon">
+                                <h3 class="deh">jQuery</h3>
+                                <p class="dep"> 
+                                시멘틱 마크업, 브라우저 렌더링 등 전반적인 프로세스에 관하여 잘 알고있습니다. 
+                                </p>
+                                <p class="level">기술 능숙도</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <button>퍼블리싱</button>
+                </li>
+                <li>                  
+                    <ul class="icon">
+                        <li>
+                            <img src="img/git.svg" alt="">
+                            <div class="icon">
+                                <h3 class="deh">Git</h3>
+                                <p class="dep"> 
+                                시멘틱 마크업, 브라우저 렌더링 등 전반적인 프로세스에 관하여 잘 알고있습니다. 
+                                </p>
+                                <p class="level">기술 능숙도</p>
+                             </div>
+                        </li>
+                        <li>
+                            <img src="img/github.svg" alt="">
+                            <div class="icon">
+                                <h3 class="deh">Git Hub</h3>
+                                <p class="dep"> 
+                                시멘틱 마크업, 브라우저 렌더링 등 전반적인 프로세스에 관하여 잘 알고있습니다. 
+                                </p>
+                                <p class="level">기술 능숙도</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/firefox.svg" alt="">
+                            <div class="icon">
+                                <h3 class="deh">Firefox</h3>
+                                <p class="dep"> 
+                                시멘틱 마크업, 브라우저 렌더링 등 전반적인 프로세스에 관하여 잘 알고있습니다. 
+                                </p>
+                                <p class="level">기술 능숙도</p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/drive.svg" alt="">
+                            <div class="icon">
+                                <h3 class="deh">Google Drive</h3>
+                                <p class="dep"> 
+                                시멘틱 마크업, 브라우저 렌더링 등 전반적인 프로세스에 관하여 잘 알고있습니다. 
+                                </p>
+                                <p class="level">기술 능숙도</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <button>협업</button>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- Portfolio  -->
+    <section id="portfolio">
+        <div class="wrap paddingT50 paddingB50">
+            <h2 class="hide"></h2>
+            <div class="popoAni">
+                <article class="popo1">
+                    <figure class="pc">
+                        <img src="img/pf1_pc.png" alt="한국교직원공제회 홈페이지 pc 이미지">
+                            <figcaption>한국교직원공제회 홈페이지</figcaption>
+                        </img>
+                    </figure>
+                    <figure class="mobile">
+                        <img src="img/pf1_mobile.png" alt="한국교직원공제회 홈페이지 mobile 이미지">
+                            <figcaption>한국교직원공제회 홈페이지</figcaption>
+                        </img>
+                    </figure>
+                    <ul>
+                        <li>
+                            <h3>기술 스택</h3>
+                            <p>HTML, CSS, JAVA, JQuery</p>
+                        </li>
+                        <li>
+                            <h3>기여도</h3>
+                            <p>퍼블리싱 100%</p>
+                        </li>
+                        <li>
+                            <h3>작업기간</h3>
+                            <p>2주</p>
+                        </li>
+                    </ul>
+                    <span class="guide">
+                        <a href="">PPT(피그마)</a>
+                        <a href="">Web Site</a>
+                        <a href="">Git Hub</a>
+                    </span>
+                </article>
+                <article class="popo2">
+                    <figure class="pc">
+                        <img src="img/pf2_pc.png" alt="한국교직원공제회 홈페이지 pc 이미지">
+                            <figcaption>한국교직원공제회 홈페이지</figcaption>
+                        </img>
+                    </figure>
+                    <figure class="mobile">
+                        <img src="img/pf2_mobile.png" alt="한국교직원공제회 홈페이지 mobile 이미지">
+                            <figcaption>한국교직원공제회 홈페이지</figcaption>
+                        </img>
+                    </figure>
+                    <ul>
+                        <li>
+                            <h3>기술 스택</h3>
+                            <p>HTML, CSS, JAVA, JQuery</p>
+                        </li>
+                        <li>
+                            <h3>기여도</h3>
+                            <p>퍼블리싱 100% 디자인 50%</p>
+                        </li>
+                        <li>
+                            <h3>작업기간</h3>
+                            <p>1주</p>
+                        </li>
+                    </ul>
+                    <span class="guide">
+                        <a href="">PPT(피그마)</a>
+                        <a href="">Web Site</a>
+                        <a href="">Git Hub</a>
+                    </span>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- 하단영역 -->
+    <footer>
+        <div class="wrap paddingT50 paddingB50">
+            <ul>
+                <li>
+                    <figure>
+                        <img src="img/kakao.svg" alt="카카오톡 이미지">
+                        <p class="sns">카카오톡 ID: portfolio123</p>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="img/email.svg" alt="이메일 이미지">
+                        <p class="sns">이메일: portfolio@gmail.com</p>
+                    </figure>
+                </li>
+            </ul>
+            <p class="right">본 페이지는 상업적 목적이 아닌 포트폴리오 용도로 제작되었습니다.
+                <span class="block"><strong>©2024  All rights reserved.</strong></span> </p>
+           
+        </div>
+    </footer>
+</body>
+</html>
